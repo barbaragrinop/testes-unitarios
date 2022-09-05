@@ -1,0 +1,40 @@
+## Unit Testing
+   > O que é teste unitário?
+      - Testar partes específicas do código
+      - Manter unitário
+      - sempre utilizar o que está dentro da função
+      - um de cada vez  
+      - Aumenta a qualidade
+
+   > Detalhes
+      - Restringir o teste para coisas que estão dentro da sua função
+      - Fazer o código pegar e depois, testar unitariamente para confirmar que está tudo pegando
+
+
+## Rodar Testes
+   > npm test
+
+
+## Códigos para Relembrar
+
+   beforeAll(() => { //antes de tudo
+       console.log("BEFORE ALL")
+   })
+   beforeEach(() => {
+       console.log("BEFORE EACH") //antes de cada
+   })
+   afterAll(() => {
+       console.log("AFTER ALL") //antes de todos
+   })
+   afterEach(() => {
+       console.log("AFTER EACH") //antes de cada
+   })
+
+   // DESCRIBE ANINHADO
+      describe('math functions', () => { //descricao das funcoes dentro do escopo (organização)
+         describe('math functions', () => { //descricao das funcoes dentro do escopo (organização)
+            it('sums 2 numbers', () => { //It vem do jest
+               expect(sum(1, 2)).toBe(3) //o teste x o que é pra retornar
+            })
+         })
+      })
